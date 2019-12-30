@@ -8,14 +8,21 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       
   <!-----css external sheet----->
-    <link rel="stylesheet" href="templates/stylesheets/style.css" type="text/css"/>
+    <link rel="stylesheet" href="stylesheet/style.css" type="text/css"/>
  
  <style>
  
+body {
+   margin: 0;
+ }
+ 
 /* Add a black background color to the top navigation */
 .topnav {
-    background-color: #333;
+    background-color: teal;
     overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 /* Style the links inside the navigation bar */
@@ -44,12 +51,46 @@
 .topnav-right {
   float: right;
 }
+
+.main {
+  padding: 16px;
+  margin-top: 30px;
+  height: 1500px; /* Used in this example to enable scrolling */
+}
+
+/*---footer styling---*/
+
+
+.textcopyright {
+  color: teal;
+  text-align: center;
+  margin-top: 10px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/*parallax scrolling */
+
+.parallax {
+  /* The image used */
+  background-image: url('https://images.pexels.com/photos/556667/pexels-photo-556667.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');
+
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 </style>
 
-    </head>
+</head>
     
     
     <body>
+      
+      <div class="parallax"></div>
     
   <div class="topnav">
   <a class="active" href="#home">Home</a>
@@ -60,6 +101,26 @@
   </div>
 </div>
   
-  
+  <div class="main">
+<p>The navbar will <strong>stick</strong> to the top when you reach its scroll position.</p>
+<p><strong>Note:</strong> Internet Explorer, Edge 15 and earlier versions do not support sticky positioning. Safari requires a -webkit- prefix.</p>
+<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  </div>
+    
+<!-----footer-copyright----->
+
+<footer>
+    
+    <div class="textcopyright">
+     Copyright 2019. Website built by Angelia. All rights reserved. For educational purposes only.
+    </div>
+</footer>
+      
     </body>
   </html>
