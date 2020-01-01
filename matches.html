@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <div class="topnav">
+    <a class="active" href="#home">Home</a>
+    <div class="topnav-right">
+      <a href="#account">Account</a>
+      <a href="#feedback">Feedback</a>
+    </div>
+  </div>
+</head>
+    <body>
+        {% for myMDB in myMDB %}
+            {{myMDB.first_name}}
+            {{myMDB.last_name}}
+            {{myMDB.age}}
+            {{myMDB.gender}}
+            {{myMDB.hobbies}}
+        {% endfor %}
+</body>
+</html>
