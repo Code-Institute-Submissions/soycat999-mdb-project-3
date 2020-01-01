@@ -15,7 +15,8 @@
 
 <body>
   <!----nav bar----->
-  
+      {% block content %} 
+
     <div class="topnav">
     <a class="active" href="#home">Home</a>
     <div class="topnav-right">
@@ -23,6 +24,7 @@
       <a href="#feedback">Feedback</a>
     </div>
   </div>
+{% endblock content %}
 
   <div class="parallax-img1"></div>
 
