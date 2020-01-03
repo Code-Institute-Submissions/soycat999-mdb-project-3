@@ -1,12 +1,13 @@
-{% block content %}
-    {% for myMDB in myMDB %} 
-        {{myMDB.first_name}} 
-        {{myMDB.last_name}} 
-        {{myMDB.age}} 
-        {{myMDB.gender}} 
-        {{myMDB.hobbies}} 
+
+
+    {% for matches in matches %} 
+        {{matches.first_name}} 
+        {{matches.last_name}} 
+        {{matches.age}} 
+        {{matches.gender}} 
+        {{matches.hobbies}} 
     {% endfor %}
     
-{% endblock content %}
+
 
 
