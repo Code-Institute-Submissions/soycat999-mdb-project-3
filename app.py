@@ -19,7 +19,9 @@ def get_matches():
 def add_profile():
     profile = mongo.db.profile
     profile.insert_one(request.form.to_dict())
-    return redirect(url_for('account.html'))
+    return redirect(url_for('index.html'))
+    
+
 
 
 if __name__ == '__main__':
