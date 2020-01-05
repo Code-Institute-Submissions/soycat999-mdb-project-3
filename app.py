@@ -7,19 +7,53 @@ app = Flask(__name__)
 app.config["MONGO_DBNAME"] = 'myDB'
 app.config["MONGO_URI"] = 'mongodb+srv://root:r00tUser@cluster0-8nixy.mongodb.net/myDB?retryWrites=true&w=majority'
 
-mongo = PyMongo(app)
+def get_connection():
+    conn = pymongo.MongoClient(MONGO_URI)
+    return conn
 
+mongo = PyMongo(app)
 
 @app.route('/')
 @app.route('/get_matches')
 def get_matches():
     return render_template('matches.html', matches=mongo.db.matches.find())
 
-@app.route('/add_profile', methods=['POST'])
-def add_profile():
-    profile = mongo.db.profile
-    profile.insert_one(request.form.to_dict())
-    return redirect(url_for('index.html'))
+
+# redirects to the register page when user clicks Register Now link
+
+@app.route('/register')
+def show_register_form():
+    return render_template('create-profile.html')
+    
+@app.route('/register')
+def process_register_form():
+    return render_template('profile-page.html', profile=mongo.db.profile.insert())
+
+    
+# @app.route('/register', methods=['POST'])
+# def process_register_form():
+#     return render_template('profile-page.html', profile=mongo.db.profile.insert())
+
+    # first_name = request.form['first_name']
+    # last_name = request.form['last_name']
+    # age = request.form['age']
+    # gender = request.form['gender']
+    # hobbies = request.form['hobbies']
+    
+    # return render_template('profile-page.html', fn=first_name, ln=last_name,  
+    #  a=age,  g=gender, h=hobbies)
+    # return render_template(profile=mongo.db.profile.insert())
+    
+    # conn = get_connection()
+    # conn = []['profile'].insert({
+    #     "first_name": first_name,
+    #     "last_name": last_name,
+    #     "age": age,
+    #     "gender":gender,
+    #     "hobbies":hobbies
+    # })
+    # return render_template('matches.html', profile=mongo.db.profile.insert())
+
     
 
 
