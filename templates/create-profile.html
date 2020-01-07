@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -9,18 +10,19 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <title>Hello, world!</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="container">
         <h1>Register Now!</h1>
         </br>
-         <form>
-  <div class="form-group">
-    <label for="exampleFormControlFile1">Upload Your Photo Here!</label>
-    <input type="file" class="form-control-file" id="exampleFormControlFile1">
-  </div>
-</form>
-        <form class='form' method="POST">
+
+
+        <form method="post" action="/register">
+            <div class="form-group">
+                <label for="exampleFormControlFile1">Upload Your Photo Here!</label>
+                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+            </div>
             <div class="form-group">
                 <label>First Name</label>
                 <input type="text" class="form-control" name=first_name required>
@@ -29,43 +31,40 @@
                 <label>Last Name</label>
                 <input type="text" class="form-control" name=last_name required>
             </div>
-          
             <div class="form-group">
                 <label>Age</label>
-                <input type="number" class="form-control" name=age min="18" max="100"/>
+                <input type="number" class="form-control" name=age min="18" max="100" />
             </div>
             <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1">
-        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-      </div>
-         <div class="form-group">
-              <p>Gender</p>
-            <input type='radio' class="form-control" name='send-spam' value='female'/> <label> Female</label><br/>
-           
-            <input type='radio' class="form-control" name='send-spam' value='male'/> <label>Male</label><br/>
-            
-            <input type='radio' class="form-control" name='send-spam' value='other'/> <label>Other</label>
-        </div>
-        
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+                <p>Gender</p>
+                <input type='radio' class="form-control" name='gender' value='female' /> <label> Female</label><br/>
+                <input type='radio' class="form-control" name='gender' value='male' /> <label>Male</label><br/>
+                <input type='radio' class="form-control" name='gender' value='other' /> <label>Other</label>
+            </div>
 
-  <div class="form-group">
-    <label for="exampleFormControlTextarea1">Enter Your Bio Here!</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-  </div>
-            <input type="submit" value="Register"/>
+            <div class="form-group">
+                <label>Enter Your Bio Here!</label>
+                <textarea type="text" class="form-control" name=bio id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">submit</button>
         </form>
     </div>
 
-    
-  
-    
+
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  </body>
+</body>
+
 </html>
 
 
@@ -75,72 +74,72 @@
 <!--            <label>First name:</label>-->
 <!--            <input type='text' name='first_name'required>-->
 <!--        </div>-->
-        
+
 <!--        <br/>-->
-        
+
 <!--        <div>-->
 <!--            <label>Last name:</label>-->
 <!--            <input type='text' name='last_name'required>-->
 <!--        </div>-->
-      
+
 <!--      <br/>-->
-      
+
 <!--       <div>-->
 <!--           <p>Gender</p>-->
 <!--            <input type='radio' name='send-spam' value='female'/><label>Female</label><br/>-->
-           
+
 <!--            <input type='radio' name='send-spam' value='male'/><label>Male</label><br/>-->
-            
+
 <!--            <input type='radio' name='send-spam' value='other'/><label>Other</label>-->
 
 <!--        </div>-->
-    
-        
+
+
 <!--        <div>-->
-    
+
 <!--            <p>Age</p>-->
 <!--          <input type="number" min="18" max="100">-->
 <!--        </select>            -->
 <!--</div>-->
-        
+
 <!--    <div>-->
 <!--        <p>What are your hobbies?</p>-->
 <!--        <input type="checkbox" name="hobby" value="crime-fighting">-->
 <!--        <label>Crime-fighting</label>-->
-        
+
 <!--        <br/>-->
-        
+
 <!--         <input type="checkbox" name="hobby" value="beach">-->
 <!--        <label>Long walks on the beach</label>-->
-        
+
 <!--         <br/>-->
-        
+
 <!--        <input type="checkbox" name="hobby" value="fighting monsters">-->
 <!--        <label>Fighting monsters</label>-->
-        
+
 <!--        <br/>-->
-    
+
 <!--        <input type="checkbox" name="hobby" value="watching movies">-->
 <!--        <label>Watching movies</label>-->
-    
+
 <!--        <br/>-->
-    
+
 <!--     <input type="checkbox" name="hobby" value="hiking">-->
 <!--     <label>Hiking</label>-->
-     
+
 <!--      <br/>-->
-      
+
 <!--      <input type="checkbox" name="hobby" value="rock-climbing">-->
 <!--     <label>Rock-climbing</label>-->
-    
+
 <!--    </div>-->
-    
+
 <!--  <br/>   -->
 <!--  <div>-->
 <!--      <textarea rows="4" cols="50">Add your bio here</textarea>-->
-      
+
 <!--  </div>-->
-  
+
 <!-- <div>-->
 <!--        <input type='submit' value='Submit'/>-->
 <!--</div>-->
