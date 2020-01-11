@@ -52,7 +52,19 @@ def new_register_form():
           a=age,  g=gender, bio=bio)
     else:
         return render_template('create-profile.html')
+        
+@app.route('/update', methods=['GET', 'POST'])
+def show_update_form():
+    if request.method == "POST":
+        first_name = request.form['first_name']
+        last_name = request.form['last_name']
+        age = request.form['age']
+        gender = request.form['gender']
+        bio = request.form['bio']
 
+    return render_template('profile-page.html', fn=first_name, ln=last_name,  
+          a=age,  g=gender, bio=bio)
+          
 # Route to update profile
 # @app.route('/update' methods=['POST'])
 # def show_update_form():
