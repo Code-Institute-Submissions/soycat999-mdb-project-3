@@ -21,11 +21,11 @@ def get_matches():
 
 # redirects to the register page when user clicks Register link
 
-# @app.route('/register')
-# def show_register_form():
-#     return render_template('create-profile.html')
+@app.route('/register')
+def show_register_form():
+    return render_template('create-profile.html')
     
-# Route does two things. 1. Sends the user's information to the backend 
+# Route does two things. 1. **Sends the user's information to the backend 
 # and displays the profile in the profile page where they will be able
 # to update their profile
     
@@ -38,8 +38,7 @@ def new_register_form():
         gender = request.form['gender']
         bio = request.form['bio']
 
-        print("12313213123")
-        print(gender)
+     
         # conn = get_connection()
         # conn[app.config['MONGO_DBNAME']]['profile'].insert({
         #  "first_name": first_name,
@@ -54,7 +53,12 @@ def new_register_form():
     else:
         return render_template('create-profile.html')
 
-
+# Route to update profile
+# @app.route('/update' methods=['POST'])
+# def show_update_form():
+    
+#     return render_template('profile-page.html')
+    
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
