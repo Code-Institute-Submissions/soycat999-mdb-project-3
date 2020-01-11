@@ -52,17 +52,24 @@ def new_register_form():
           a=age,  g=gender, bio=bio)
     else:
         return render_template('create-profile.html')
+      
+# redirects the user to the update-profile page
+
+@app.route('/updateNow')
+def route_update_form():
+    return render_template('update-profile.html')
+      
+# When user updates their profile, they will be redirected to the profile page. 
         
-@app.route('/update', methods=['GET', 'POST'])
+@app.route('/update', methods=['POST'])
 def show_update_form():
-    if request.method == "POST":
         first_name = request.form['first_name']
         last_name = request.form['last_name']
         age = request.form['age']
         gender = request.form['gender']
         bio = request.form['bio']
 
-    return render_template('profile-page.html', fn=first_name, ln=last_name,  
+        return render_template('profile-page.html', fn=first_name, ln=last_name,  
           a=age,  g=gender, bio=bio)
           
 # Route to update profile
