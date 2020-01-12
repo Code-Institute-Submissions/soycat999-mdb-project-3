@@ -1,31 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-
-  <!--Import Google Icon Font-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-  <!-----css external sheet----->
-    <link rel="stylesheet" href="/static/stylesheet/style.css" type="text/css" >
-</head>
-
-<body>
-  <!----nav bar----->
-    
-
-    <div class="topnav">
-    <a class="active" href="index.html">Home</a>
-    <div class="topnav-right">
-      <a href="/register">Register</a>
-      <a href="#feedback-form.html">Feedback</a>
-    </div>
-  </div>
-    {% block content %} 
-{% endblock content %}
+{% extends 'base.html'%} {% block content %} 
 
   
   <div class="parallax-img2"></div>
@@ -45,15 +18,5 @@
 
   <div class="parallax-img3"></div>
   
-
-  <!-----footer-copyright----->
-
-  <footer>
-
-    <div class="textcopyright">
-      Copyright 2019. Website built by Angelia. All rights reserved. For educational purposes only.
-    </div>
-  </footer>
-
-</body>
-</html>
+{% endblock content %}
+ 
