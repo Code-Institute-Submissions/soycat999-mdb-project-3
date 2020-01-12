@@ -1,17 +1,48 @@
+{% extends 'base.html'%} {% block content %} 
 
+<br><br><br>
+<p>Hello!</p>
 
-{% extends 'index.html' %}
+<a href="{{url_for('get_matches')}}">Reset Search</a>
 
-{%block content %}
+<!--Dropdown Search-->
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown">
+    {{type}}
+  </button>
+  <div class="dropdown-menu">
+      {% for gender in gender %}
+    <a class="dropdown-item" href="?type={{gender.gender}}">{{gender.gender}}</a>
 
-
-    {% for matches in matches %} 
-        {{matches.first_name}} 
-        {{matches.last_name}} 
-        {{matches.age}} 
-        {{matches.gender}} 
-        {{matches.bio}} 
     {% endfor %}
+  </div>
+</div>
+
+<!--Display data information-->
+<div class="container">
+<div class="row">
+    {% for matches in matches %}
+<div class="col-xl-3 col-md-6 mb-4">
+<div class="card" style="width: 18rem;">
+    
+  <img src="..." class="card-img-top" alt="No Image">
+  <div class="card-body">
+      
+    <h5 class="card-title">{{matches.first_name}} {{matches.last_name}}</h5>
+    <p class="card-text">{{matches.hobbies}}</p>
+    
+    
+  </div>
+  
+</div>
+{% endfor %}
+</div>
+</div>
+</div>
+
+
+
+
 {% endblock content %}
     
 
