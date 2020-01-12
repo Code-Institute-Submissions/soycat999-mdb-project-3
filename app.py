@@ -1,22 +1,51 @@
 import os
-from flask import Flask, render_template, redirect, request, url_for
-from flask_pymongo import PyMongo
+from flask import Flask, render_template, redirect, request, url_for, flash
+from flask_pymongo import PyMongo, pymongo
 from bson.objectid import ObjectId
+import re
 
 app = Flask(__name__)
 app.config["MONGO_DBNAME"] = 'myDB'
-app.config["MONGO_URI"] = 'mongodb+srv://root:r00tUser@cluster0-8nixy.mongodb.net/myDB?retryWrites=true&w=majority'
-
-def get_connection():
-    conn = PyMongo.MongoClient(app.config["MONGO_URI"])
-    return conn
-
+app.config["MONGO_URI"] = os.getenv("MONGO_URI")
+conn=pymongo.MongoClient(os.getenv("MONGO_URI"))
+DATABASE_NAME = 'myDB'
+COLLECTION1 = 'account'
+COLLECTION2 = 'gender'
+COLLECTION3 = 'matches'
+COLLECTION4 = 'profile'
 mongo = PyMongo(app)
 
-@app.route('/index.html')
+
+
+# def get_connection():
+#     conn = PyMongo.MongoClient("MONGO_URI")
+#     return conn
+@app.route('/')
+@app.route('/index')
+def index():
+    return render_template('index.html')
+    
 @app.route('/get_matches')
 def get_matches():
-    return render_template('matches.html', matches=mongo.db.matches.find())
+    type = request.args.get('type')
+    criteria= {} 
+    
+    if type and type != 'Type':
+        criteria['gender'] = type
+    else:
+        type = 'Gender'
+    
+    gender = conn[DATABASE_NAME][COLLECTION2].find()
+    matches = conn[DATABASE_NAME][COLLECTION3].find(criteria)
+    return render_template('matches.html', matches=matches,gender=gender,type=type)
+    
+    
+    # matches = conn['MONGO_DBNAME']['matches'].find({
+    #     'first_name':"black"
+    # })
+    
+    # matches = conn[app.config['MONGO_DBNAME']]['matches.html'].find()
+    # return render_template('matches.html', matches=matches)
 
 
 # redirects to the register page when user clicks Register link
@@ -38,15 +67,14 @@ def new_register_form():
         gender = request.form['gender']
         bio = request.form['bio']
 
-     
-        # conn = get_connection()
-        # conn[app.config['MONGO_DBNAME']]['profile'].insert({
-        #  "first_name": first_name,
-        #  "last_name": last_name,
-        #      "age": age,
-        #      "gender":gender,
-        #     "hobbies":hobbies,
-        #  })
+    
+        conn[DATABASE_NAME][COLLECTION4].insert({
+         "first_name": first_name,
+         "last_name": last_name,
+             "age": age,
+             "gender":gender,
+             "bio":bio
+         })
         
         return render_template('profile-page.html', fn=first_name, ln=last_name,  
           a=age,  g=gender, bio=bio)
