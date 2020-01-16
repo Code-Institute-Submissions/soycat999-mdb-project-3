@@ -13,8 +13,10 @@
   <div class="dropdown-menu">
       {% for gender in gender %}
     <a class="dropdown-item" href="?type={{gender.gender}}">{{gender.gender}}</a>
+    
 
     {% endfor %}
+
   </div>
 </div>
 
@@ -30,18 +32,18 @@
       
     <h5 class="card-title">{{matches.first_name}} {{matches.last_name}}</h5>
     <p class="card-text">{{matches.hobbies}}</p>
-    
+      <a href='{{url_for('confirm_delete_matches', matches_id=['_id'])}}' class='btn btn-danger'>Delete</a>
+
     
   </div>
   
 </div>
+</div>
+</div>
+</div>
+
+
 {% endfor %}
-</div>
-</div>
-</div>
-
-
-
 
 {% endblock content %}
     
