@@ -105,6 +105,31 @@ def show_update_form():
 # def show_update_form():
     
 #     return render_template('profile-page.html')
+
+
+#delete individual match
+#Adding a route to confirm if the user really wants to delete the match
+@app.route('/matches/<matches_id>/confirm_delete')
+def confirm_delete_matches(matches_id):
+    matches = conn[DATABASE_NAME][COLLECTION3].find_one({
+        '_id':ObjectId(matches_id)
+    })
+    return render_template('confirm_delete_matches.html', matches)
+    
+# # route that actually deletes the match
+@app.route('/matches/<matches_id>/delete')
+def delete_matches(matches_id):
+    
+    matches = conn[DATABASE_NAME][COLLECTION3].find_one({
+        '_id':ObjectId(matches_id)
+        })
+    
+    conn[DATABASE_NAME][COLLECTION3].remove({
+        'matches_id'
+    })
+    
+    flash("Match Has been deleted!")
+    return redirect(url_for('index.html'))
     
 
 if __name__ == '__main__':
