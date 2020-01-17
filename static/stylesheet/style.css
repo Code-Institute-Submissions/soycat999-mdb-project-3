@@ -44,7 +44,16 @@
     .topnav-right {
       float: right;
     }
-
+     
+     /*footer bar styling*/
+     
+    .footerbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+}
 
     /*---footer styling---*/
 
@@ -54,8 +63,8 @@
       padding: 10px;
       font-family: 'Roboto', sans-serif;
       background: teal;
-
     }
+    
 
     /*parallax scrolling */
 
