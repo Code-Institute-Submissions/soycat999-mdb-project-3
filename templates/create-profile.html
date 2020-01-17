@@ -1,34 +1,34 @@
-{% extends 'base.html'%} {% block content %} 
+{% extends 'base.html'%} {% block content %}
 
 <br><br><br>
-    <div class="container">
-        <h1>Register Now!</h1>
-        </br>
+<div class="container">
+  <h1>Register Now!</h1>
+  </br>
 
 
-        <form method="post" action="/register">
-            <div class="form-group">
-                <label for="exampleFormControlFile1">Upload Your Photo Here!</label>
-                <input type="file" class="form-control-file" id="exampleFormControlFile1">
-            </div>
-            <div class="form-group">
-                <label>First Name</label>
-                <input type="text" class="form-control" name=first_name required>
-            </div>
-            <div class="form-group">
-                <label>Last Name</label>
-                <input type="text" class="form-control" name=last_name required>
-            </div>
-            <div class="form-group">
-                <label>Age</label>
-                <input type="number" class="form-control" name=age min="18" max="100" />
-            </div>
-            <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1">
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-            </div>
-        <div class="form-group">
+  <form method="post" action="/register">
+    <div class="form-group">
+      <label for="exampleFormControlFile1">Upload Your Photo Here!</label>
+      <input type="file" class="form-control-file" id="exampleFormControlFile1">
+    </div>
+    <div class="form-group">
+      <label>First Name</label>
+      <input type="text" class="form-control" name=first_name required>
+    </div>
+    <div class="form-group">
+      <label>Last Name</label>
+      <input type="text" class="form-control" name=last_name required>
+    </div>
+    <div class="form-group">
+      <label>Age</label>
+      <input type="number" class="form-control" name=age min="18" max="100" />
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
       <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
       <div class="col-sm-10">
         <div class="form-check">
@@ -49,105 +49,17 @@
             Others
           </label>
         </div>
-        </div>
-        </br>
-            <!--<div class="form-group">-->
-            <!--    <p>Gender</p>-->
-            <!--    <input type='radio' class="form-control" name='gender' value='female' /> <label> Female</label><br/>-->
-            <!--    <input type='radio' class="form-control" name='gender' value='male' /> <label>Male</label><br/>-->
-            <!--    <input type='radio' class="form-control" name='gender' value='other' /> <label>Other</label>-->
-            <!--</div>-->
+      </div>
 
-            <div class="form-group">
-                <label>Enter Your Bio Here!</label>
-                <textarea type="text" class="form-control" name=bio rows="3"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">submit</button>
-        </form>
-    </div>
-    </div>
+      </br>
+
+      <div class="form-group">
+        <label>Enter Your Bio Here!</label>
+        <textarea type="text" class="form-control" name=bio rows="3"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">submit</button>
+  </form>
+  </div>
+</div>
 
 {% endblock content %}
-
-
-
-
-
-<!--   <form action= "https://www.w3schools.com/" method="POST">-->
-<!--        <div>-->
-<!--            <label>First name:</label>-->
-<!--            <input type='text' name='first_name'required>-->
-<!--        </div>-->
-
-<!--        <br/>-->
-
-<!--        <div>-->
-<!--            <label>Last name:</label>-->
-<!--            <input type='text' name='last_name'required>-->
-<!--        </div>-->
-
-<!--      <br/>-->
-
-<!--       <div>-->
-<!--           <p>Gender</p>-->
-<!--            <input type='radio' name='send-spam' value='female'/><label>Female</label><br/>-->
-
-<!--            <input type='radio' name='send-spam' value='male'/><label>Male</label><br/>-->
-
-<!--            <input type='radio' name='send-spam' value='other'/><label>Other</label>-->
-
-<!--        </div>-->
-
-
-<!--        <div>-->
-
-<!--            <p>Age</p>-->
-<!--          <input type="number" min="18" max="100">-->
-<!--        </select>            -->
-<!--</div>-->
-
-<!--    <div>-->
-<!--        <p>What are your hobbies?</p>-->
-<!--        <input type="checkbox" name="hobby" value="crime-fighting">-->
-<!--        <label>Crime-fighting</label>-->
-
-<!--        <br/>-->
-
-<!--         <input type="checkbox" name="hobby" value="beach">-->
-<!--        <label>Long walks on the beach</label>-->
-
-<!--         <br/>-->
-
-<!--        <input type="checkbox" name="hobby" value="fighting monsters">-->
-<!--        <label>Fighting monsters</label>-->
-
-<!--        <br/>-->
-
-<!--        <input type="checkbox" name="hobby" value="watching movies">-->
-<!--        <label>Watching movies</label>-->
-
-<!--        <br/>-->
-
-<!--     <input type="checkbox" name="hobby" value="hiking">-->
-<!--     <label>Hiking</label>-->
-
-<!--      <br/>-->
-
-<!--      <input type="checkbox" name="hobby" value="rock-climbing">-->
-<!--     <label>Rock-climbing</label>-->
-
-<!--    </div>-->
-
-<!--  <br/>   -->
-<!--  <div>-->
-<!--      <textarea rows="4" cols="50">Add your bio here</textarea>-->
-
-<!--  </div>-->
-
-<!-- <div>-->
-<!--        <input type='submit' value='Submit'/>-->
-<!--</div>-->
-<!--    </form>-->
-<!--    </div>-->
-<!--</body>-->
-<!--</html>-->
