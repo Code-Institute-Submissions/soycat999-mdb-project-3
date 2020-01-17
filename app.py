@@ -114,22 +114,22 @@ def confirm_delete_matches(matches_id):
     matches = conn[DATABASE_NAME][COLLECTION3].find_one({
         '_id':ObjectId(matches_id)
     })
-    return render_template('confirm_delete_matches.html', matches)
+    return render_template('confirm_delete_matches.html', matches_id=matches)
     
-# # route that actually deletes the match
-@app.route('/matches/<matches_id>/delete')
-def delete_matches(matches_id):
+# # # route that actually deletes the match
+# @app.route('/matches/<matches_id>/delete')
+# def delete_matches(matches_id):
     
-    matches = conn[DATABASE_NAME][COLLECTION3].find_one({
-        '_id':ObjectId(matches_id)
-        })
+#     matches = conn[DATABASE_NAME][COLLECTION3].remove({
+#         '_id':ObjectId(matches_id)
+#         })
     
-    conn[DATABASE_NAME][COLLECTION3].remove({
-        'matches_id'
-    })
+#     # conn[DATABASE_NAME][COLLECTION3].remove({
+#     #     'matches_id'
+#     # })
     
-    flash("Match Has been deleted!")
-    return redirect(url_for('index.html'))
+#     # flash("Match Has been deleted!")
+#     return redirect(url_for('index.html'))
     
 
 if __name__ == '__main__':
