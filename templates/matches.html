@@ -1,12 +1,43 @@
-{% extends 'base.html'%} {% block content %} 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-<br><br><br>
-<p>Hello!</p>
+
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-----css external sheet----->
+  <link rel="stylesheet" href="{{url_for('static', filename='stylesheet/style.css')}}" type="text/css" >
+  
+  <!--Bootstrap-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    
+  <!----nav bar----->
+    
+
+    <div class="topnav">
+    <a class="active" href="{{url_for('index')}}">Home</a>
+    <div class="topnav-right">
+      <a href="{{url_for('show_register_form')}}">Register</a>
+      <a href="{{url_for('get_matches')}}">Find Matches</a>
+    </div>
+  </div>
+
+</br>
+<div class="container">
+<h1>Find the perfect partner today!</h1>
+<div>
 
 <a href="{{url_for('get_matches')}}">Reset Search</a>
 
 <!--Dropdown Search-->
-<div class="dropdown">
+<div class="container">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown">
     {{type}}
   </button>
@@ -14,37 +45,45 @@
       {% for gender in gender %}
     <a class="dropdown-item" href="?type={{gender.gender}}">{{gender.gender}}</a>
     
-
     {% endfor %}
 
   </div>
 </div>
+</div>
 
-<!--Display data information-->
-<div class="container">
-<div class="row">
-    {% for matches in matches %}
-<div class="col-xl-3 col-md-6 mb-4">
-<div class="card" style="width: 18rem;">
-    
-  <img src="..." class="card-img-top" alt="No Image">
-  <div class="card-body">
-      
-    <h5 class="card-title">{{matches.first_name}} {{matches.last_name}}</h5>
-    <p class="card-text">{{matches.hobbies}}</p>
-      <a href='{{url_for('confirm_delete_matches', matches_id=['_id'])}}' class='btn btn-danger'>Delete</a>
-
-    
-  </div>
+</br>
   
+<!--Display data information-->
+
+<div class="container">
+<div class="row row-cols-1 row-cols-md-2">   
+{% for match in matches %}
+<div class="col mb-4">
+  <div class="card"
+  <img src="..." class="card-img-top" alt="No Image">
+    {{matches}}
+
+<h5 class="card-title">{{match.first_name}} {{match.last_name}}</h5>
+<p class="card-text">{{match.hobbies}}</p>
+
+<a href='{{url_for('confirm_delete_matches', matches_id=match._id)}}' class='btn btn-danger'>Delete</a>
+
+  
+  </div>
+  </div>
+     {% endfor %}
 </div>
 </div>
 </div>
 </div>
 
 
-{% endfor %}
+<!-----Optional JavaScript----->
+<!-----jQuery first, then Popper.js, then Bootstrap JS----->
 
-{% endblock content %}
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     
-
+</body>
+</html>
