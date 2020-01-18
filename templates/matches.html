@@ -56,15 +56,16 @@
 <!--Display data information-->
 
 <div class="container">
-<div class="row row-cols-1 row-cols-md-2">   
-{% for match in matches %}
-<div class="col mb-4">
-  <div class="card"
-  <img src="..." class="card-img-top" alt="No Image">
-    {{matches}}
+<div class="row row-cols-1 row-cols-md-2">
 
-<h5 class="card-title">{{match.first_name}} {{match.last_name}}</h5>
-<p class="card-text">{{match.hobbies}}</p>
+{% for match in matches %}
+
+<div class="col mb-4">
+<div class="card">
+
+<img src="https://images.pexels.com/photos/2078467/pexels-photo-2078467.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" class="card-img-top" alt="No Image">
+<center><h5 class="card-title">{{match.first_name}} {{match.last_name}}</h5></center>
+<center><p class="card-text">{{match.hobbies}}</p></center>
 
 <a href='{{url_for('confirm_delete_matches', matches_id=match._id)}}' class='btn btn-danger'>Delete</a>
 
