@@ -1,6 +1,6 @@
 # mdb-Project-3
 
-This project focuses on using python flask to connect MongoDB. The website was build with the intention to bring people of different backgrounds and hobbies together. The website is designed to be intuitive and easy to navigate. It is targeted towards people who are looking for a finding a partner in crime.  
+This project focuses on using python flask to connect MongoDB. The website was build with the intention to bring people of different backgrounds and hobbies together. The website is designed to be intuitive and easy to navigate. It is targeted towards people who are looking for a partner in crime.  
 
 ## Demo
 
@@ -12,7 +12,7 @@ A live demo of the website can be found here: https://angie-database-project.her
 
 | User Stories        | Description           | Features to implement  |
 | :------------- |:-------------| :-----|
-| 1      | User would like to register| To include a register form.  |
+| 1      | User would like to register| To include a registration form.  |
 | 2      | User would like to update profile. | To include a form that lets the user update their profile.  |
 | 3      | User would like to see potential matches  | To include a page full of potential matches that the user can choose from. These matches have been pulled from MondoDB  |
 | 4      | User would like to see matches according to gender | To include a search filter that allows user to search by gender   |
@@ -43,16 +43,16 @@ https://drive.google.com/file/d/18nfM9JNUAi6mCA63bKsiRqSRWRZ4t08Y/view?usp=shari
 
 
 ### (ii) Features to implement in the future
-In the future, I would like the website to have a login and logout function. This will enable returning, registered users to access their profile easily, without having to re-register all over again. Another thing I would like to implment is a form of contact or feedback for users to use. Including a more comprehensive search filter that filters according to age, location, etc would improve the site's user experience as well. Finally, I would like to add a delete profile option for users.  
+In the future, I would like the website to have a login and logout function. This will enable returning, registered users to access their profile easily, without having to re-register all over again. Another thing I would like to implement is a form of contact or feedback for users to use. Including a more comprehensive search filter that filters according to age, location, etc would improve the site's user experience as well. Finally, I would like to add a delete profile option for users.  
 
 ### Limitation 
 Registered users will not be able to see their profile when they enter the site. There is no login or logout function, hence a registered user will not be able to pull his/her information from the database. Users will not have an option to delete their profile.
 
 ## Project Surface
 ### Design Choices
-(i) The colour scheme of header text and the nav bar is intended make the title of the website stand out. 
+(i) The colour scheme of header text and the nav bar is intended to make the title of the website stand out. 
 (ii) The nav bar text changes colour when user hovers over the text. This will show them that the text is a clickable link. (iii) When the mouse hovers over the text, the cursor changes to further indicate that the link is clickable.  
-(iv) The background image is attractive and colourful, so as to draw the users eye. 
+(iv) The background image is attractive and colourful, so as to draw the user's eye. 
 (v) The overall colour scheme was chosen to exude a romantic and relaxed vibe. 
 (vi) The colour of the text box in the middle and the font colour of the text inside the box matches the colours of the background image. 
 (vii) Included two parallax images in the landing page to give the website more depth. 
@@ -89,7 +89,7 @@ This site was tested across multiple devices multiple mobile devices
 | 1      | When user hovers over the text on the header text , it will change colour. Additionally, hovering over the text will change the cursor to show users that it is a clickable link. | Pass  |
 | 2      | When user clicks on the register link, they will be redirected to a form that allows them to register their profile. | Pass  |
 | 3      | When user clicks on the matches link, they will be able to see the potential matches.| Pass  |
-| 4      | User will be able able to update their profile in the profile page. | Pass  |
+| 4      | User will be able to update their profile in the profile page. | Pass  |
 | 5      | User will be able to delete matches. | Pass  |
 
 ## Bugs Discovered
