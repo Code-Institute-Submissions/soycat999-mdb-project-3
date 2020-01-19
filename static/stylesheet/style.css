@@ -3,7 +3,9 @@
     html {
       margin: 0;
       height: 100%;
-    }
+      font-family: 'Satisfy', cursive, sans-serif ;
+}
+      
 
     /* Add a black background color to the top navigation */
 
