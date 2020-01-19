@@ -30,7 +30,6 @@ A live demo of the website can be found here: https://angie-database-project.her
 - Find Matches page - The matches page will showcase all the potential matches that the user can choose from. Users can delete the matches (this is to showcase the delete function).
 
 
-
 ### (ii) Wireframes here.
 View wireframes for both desktop and mobile here:
 https://drive.google.com/file/d/18nfM9JNUAi6mCA63bKsiRqSRWRZ4t08Y/view?usp=sharing
@@ -43,10 +42,10 @@ https://drive.google.com/file/d/18nfM9JNUAi6mCA63bKsiRqSRWRZ4t08Y/view?usp=shari
 
 
 ### (ii) Features to implement in the future
-In the future, I would like the website to have a login and logout function. This will enable returning, registered users to access their profile easily, without having to re-register all over again. Another thing I would like to implement is a form of contact or feedback for users to use. Including a more comprehensive search filter that filters according to age, location, etc would improve the site's user experience as well. Finally, I would like to add a delete profile option for users.  
+In the future, I would like the website to have a login and logout function. This will enable returning, registered users to access their profile easily, without having to re-register all over again. Another thing I would like to implement is a functioning feedback or contact form for users to use. Including a more comprehensive search filter that filters according to age, location, etc would improve the site's user experience as well. Finally, I would like to add a delete profile option for users.  
 
 ### Limitation 
-Registered users will not be able to see their profile when they enter the site. There is no login or logout function, hence a registered user will not be able to pull his/her information from the database. Users will not have an option to delete their profile.
+Registered users will not be able to see their profile when they enter the site. There is no login or logout function, hence a registered user will not be able to pull his/her information from the database. Users will not have an option to delete their profile. Although there is a link for users to send a message to the matches, this link doesn't work, it is only there as a means of display. 
 
 ## Project Surface
 ### Design Choices
